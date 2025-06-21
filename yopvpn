@@ -9,8 +9,7 @@ fi
 
 IP="$1"
 
-ssh root@$IP "apt update && apt upgrade -y"
-ssh root@$IP "apt install -y docker.io docker-compose"
+ssh root@$IP "apt update && apt install -y docker.io docker-compose"
 ssh root@$IP "systemctl enable --now docker"
 
 ssh root@$IP "mkdir -p /opt/wireguard/config"

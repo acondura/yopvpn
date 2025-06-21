@@ -3,7 +3,7 @@ YOPVPN (Your Own Private VPN) is a fast, secure, and open-source VPN solution po
 
 # Usage
 
-./yopvpn IP
+./yopvpn [INSERT_IP]
 
 # Use Cases
 
