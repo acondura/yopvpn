@@ -39,11 +39,18 @@ ssh root@$IP "docker run -d \
   --restart unless-stopped \
   lscr.io/linuxserver/wireguard:latest"
 
+# Detect OS and set the Downloads path accordingly
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
+  DOWNLOADS_PATH="$USERPROFILE/Downloads"
+else
+  DOWNLOADS_PATH="$HOME/Downloads"
+fi
+
 # Copy the generated WireGuard peer config file from the server to the local Downloads folder
-scp root@$IP:/opt/wireguard/config/peer1/peer1.conf ~/Downloads/peer1.conf
+scp root@$IP:/opt/wireguard/config/peer1/peer1.conf "$DOWNLOADS_PATH/peer1.conf"
 
 # Copy the generated WireGuard peer QR code image from the server to the local Downloads folder
-scp root@$IP:/opt/wireguard/config/peer1/peer1.png ~/Downloads/peer1.png
+scp root@$IP:/opt/wireguard/config/peer1/peer1.png "$DOWNLOADS_PATH/peer1.png"
 
 # --- Explanation of docker run options above ---
 # --name=wireguard: Name the container 'wireguard'
