@@ -1,5 +1,5 @@
 # YOPVPN
-YOPVPN (Your Own Private VPN) is a fast, secure, and open-source VPN solution powered by WireGuard — giving you complete control over your online privacy. Host it yourself. Own your traffic. Stay private.
+YOPVPN (Your Own Private VPN) is a fast, secure, and open-source VPN solution powered by [WireGuard](https://www.wireguard.com/){:target="_blank"} — giving you complete control over your online privacy. Host it yourself. Own your traffic. Stay private.
 
 # Use Cases
 
