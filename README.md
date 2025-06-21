@@ -4,7 +4,7 @@ YOPVPN (Your Own Private VPN) is a fast, secure, and open-source VPN solution po
 # Use Cases
 
 ## 🔒 Privacy & Security
-**Secure Internet Browsing**
+**<font color="green">Secure Internet Browsing</font>**
 – Encrypt traffic on public Wi-Fi (cafés, airports, hotels).
 
 **Protection from ISPs & Advertisers**
