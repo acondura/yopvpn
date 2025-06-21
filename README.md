@@ -3,7 +3,7 @@ YOP VPN (YourOwnPrivate VPN) is a fast, secure (state-of-the-art cryptography) a
 **Host it yourself. Own your traffic. Stay private.**
 
 # Background
-I wanted to watch a movie that has become unavailable in the cinemas in my region and I knew that it is available with a streaming subscription I already had but again, not in my region, only in US. As anyone would, I immediately thought of using a VPN service but I didn't want to pay the full month price for a two hour watching experience.
+I wanted to watch a movie that had become unavailable in the cinemas in my region and I knew that it is available with a streaming subscription I already had but again, not in my region, only in US. As anyone would, I immediately thought of using a VPN service but I didn't want to pay the full month price for a two hour watching experience.
 
 So, I built my own custom VPN with Wireguard. What follows is a quick guide about the script I eventually ended up using, instead of the manual steps.
 The potential is huge, please check an extensive use case list at the end.
