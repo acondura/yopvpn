@@ -2,6 +2,12 @@
 YOPVPN (Your Own Private VPN) is a fast, secure (state-of-the-art cryptography) and open-source VPN solution powered by [WireGuard](https://www.wireguard.com/) — giving you complete control over your online privacy.  
 **Host it yourself. Own your traffic. Stay private.**
 
+# Background
+I wanted to watch a movie that has become unavailable in the cinemas in my region and I knew that it is available with a streaming subscription I already had but again, not in my region, only in US. As anyone would, I immediately thought of using a VPN service but I didn't want to pay the full month price for a two hour watching experience.
+
+So, I built my own custom VPN with Wireguard. What follows is a quick guide about the script I eventually ended up using, instead of the manual steps.
+The potential is huge, please check an extensive use case list at the end.
+
 # Usage
 
 ./yopvpn [SERVER_IP]
@@ -12,6 +18,13 @@ YOPVPN (Your Own Private VPN) is a fast, secure (state-of-the-art cryptography) 
 - Run the above command using the server IP you've just created
 - Install the [Wireguard client](https://www.wireguard.com/install) (Win/MacOS/Linux/mobile)
 - Import the downloaded file (from Downloads/peer1.conf) in the Wireguard client for desktop devices OR scan the downloaded image (from Downloads/peer1.png) for mobile devices from your Wireguard client
+
+# Security
+- Setup your VPS to use your computer's SSH keys (you can generate them by typing "how to generate ssh keys for Win/Mac/Linux" in google and AI will give you the steps)
+- Wireguard is setup so that only you (or anyone who has the generated peer configuration file /opt/wireguard/config/peer1/peer1.conf) can connect to your WireGuard VPN.
+  - The server generates a unique key pair for each peer (client).
+  - Only someone with the private key from peer1.conf can connect as "peer1".
+  - No one else can connect unless you give them a peer config or add more peers (and if you share their configs).
 
 # Use Cases
 
