@@ -21,6 +21,8 @@ The potential is actually huge (not just for streaming), you check out an extens
 - Install the [Wireguard client](https://www.wireguard.com/install) (Win/MacOS/Linux/mobile)
 - Import the downloaded file (from Downloads/peer1.conf) in the Wireguard client for desktop devices OR scan the downloaded image (from Downloads/peer1.png) for mobile devices from your Wireguard client
 
+Full details at [https://condurachi.ro/setting-your-own-private-vpn/#cli](https://condurachi.ro/setting-your-own-private-vpn/#cli)
+
 # Security
 - Setup your VPS to use your computer's SSH keys (you can generate them by typing "how to generate ssh keys for Win/Mac/Linux" in google and AI will give you the steps)
 - Wireguard is setup so that only you (or anyone who has the generated peer configuration file /opt/wireguard/config/peer1/peer1.conf) can connect to your WireGuard VPN.
