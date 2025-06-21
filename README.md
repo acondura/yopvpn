@@ -8,7 +8,7 @@ I wanted to watch a movie that had become unavailable in the cinemas in my regio
 So, I built my own custom VPN with WireGuard. Later that evening, I was able to watch the movie using a custom VPN installation and paying less then 2 cents for it (litteraly, $0.018 with Hetzner.de VPS provider).
 
 What follows is a quick guide about the script I eventually ended up using, instead of the manual steps.
-The potential is actually huge (not just for streaming), you check an extensive use case list at the end.
+The potential is actually huge (not just for streaming), you check out an extensive use case list at the end.
 
 # Usage
 
