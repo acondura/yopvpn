@@ -3,7 +3,7 @@ YOPVPN (Your Own Private VPN) is a fast, secure, and open-source VPN solution po
 
 # Use Cases
 
-Privacy & Security
+## 🔒 Privacy & Security
 Secure Internet Browsing
 – Encrypt traffic on public Wi-Fi (cafés, airports, hotels).
 
@@ -16,7 +16,7 @@ Anonymity for Research or Whistleblowing
 Secure Communication
 – Encrypt VoIP, messaging, and email traffic.
 
-🌍 Remote Access & Networking
+## 🌍 Remote Access & Networking
 Access Home/Office Network Remotely
 – Connect to home devices (e.g., NAS, printers, servers).
 
@@ -32,7 +32,7 @@ Developer-Friendly Remote Dev Environments
 Cloud-Connected IoT Devices
 – Securely route smart devices or Raspberry Pis through the VPN.
 
-🚫 Censorship & Geo-Restrictions
+## 🚫 Censorship & Geo-Restrictions
 Bypass Censorship in Restricted Countries
 – Access blocked sites like Google, YouTube, or social media.
 
@@ -42,7 +42,7 @@ Geo-Unblocking for Content Streaming
 Travel Use
 – Keep a consistent, safe internet experience abroad.
 
-🧪 Testing, Admin, & DevOps
+## 🧪 Testing, Admin, & DevOps
 Secure Server Management
 – SSH into cloud infrastructure over a private, encrypted channel.
 
@@ -55,7 +55,7 @@ Network Simulation or Testing
 Private CI/CD Pipelines or Build Systems
 – Connect internal build tools without exposing them publicly.
 
-👥 Multi-User or Team Use
+## 👥 Multi-User or Team Use
 Small Team Secure VPN
 – Set up for a dev team, startup, or small business.
 
@@ -65,7 +65,7 @@ Family VPN
 Custom Access Control
 – Restrict access to certain IPs or services per user.
 
-🛡️ Advanced & Niche Use Cases
+## 🛡️ Advanced & Niche Use Cases
 Kill Switch / Always-On VPN
 – Enforce VPN-only internet for secure devices.
 
@@ -84,7 +84,7 @@ Anonymous Torrenting (ethically)
 Gaming VPN
 – Reduce ping or bypass region locks (with careful config).
 
-💡 Educational or Business Use
+## 💡 Educational or Business Use
 Educational Tool
 – Teach networking, encryption, Linux server admin, or privacy.
 
