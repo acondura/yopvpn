@@ -5,7 +5,7 @@ YOPVPN (Your Own Private VPN) is a fast, secure, and open-source VPN solution po
 
 ## 🔒 Privacy & Security
 Secure Internet Browsing
-– Encrypt traffic on public Wi-Fi (cafés, airports, hotels).
+ – Encrypt traffic on public Wi-Fi (cafés, airports, hotels).
 
 Protection from ISPs & Advertisers
 – Prevent tracking, DNS snooping, and bandwidth throttling.
@@ -15,6 +15,7 @@ Anonymity for Research or Whistleblowing
 
 Secure Communication
 – Encrypt VoIP, messaging, and email traffic.
+
 
 ## 🌍 Remote Access & Networking
 Access Home/Office Network Remotely
