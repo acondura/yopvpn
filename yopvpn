@@ -37,7 +37,7 @@ ssh root@$IP "docker run -d \
   -v /lib/modules:/lib/modules \
   --sysctl=\"net.ipv4.conf.all.src_valid_mark=1\" \
   --restart unless-stopped \
-  lscr.io/linuxserver/wireguard:latest"    # Use the latest WireGuard image
+  lscr.io/linuxserver/wireguard:latest"
 
 # Copy the generated WireGuard peer config file from the server to the local Downloads folder
 scp root@$IP:/opt/wireguard/config/peer1/peer1.conf ~/Downloads/peer1.conf
@@ -64,4 +64,4 @@ scp root@$IP:/opt/wireguard/config/peer1/peer1.png ~/Downloads/peer1.png
 # -v /lib/modules:/lib/modules: Mount modules directory
 # --sysctl="net.ipv4.conf.all.src_valid_mark=1": Set sysctl for WireGuard
 # --restart unless-stopped: Restart container unless stopped manually
-# lscr.io/linuxserver/wireguard:latest: Use the
+# lscr.io/linuxserver/wireguard:latest: Use the latest WireGuard image
