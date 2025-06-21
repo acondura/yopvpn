@@ -5,6 +5,13 @@ YOPVPN (Your Own Private VPN) is a fast, secure, and open-source VPN solution po
 
 ./yopvpn [SERVER_IP]
 
+## Quick steps
+- Make sure your SSH key is uploaded to your account in the VPS provider's website
+- Create a VPS server with any provider (e.g. DigitalOcean, Linode, Vultr, Hetzner, etc.) - extensive list at https://www.vpsbenchmarks.com/hosters
+- Run the above command using the server IP you've just created
+- Install the [Wireguard client](https://www.wireguard.com/install) (Win/MacOS/Linux/mobile)
+- Import the downloaded file (from Downloads/peer1.conf) in the Wireguard client for desktop devices OR scan the downloaded image (from Downloads/peer1.png) for mobile devices from your Wireguard client
+
 # Use Cases
 
 ## 🔒 Privacy & Security
