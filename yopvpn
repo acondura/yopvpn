@@ -1,19 +1,23 @@
 #!/bin/bash
 
-# get IP value from input
-# Usage: ./yopvpn.sh <IP_ADDRESS>
+# Check if an IP address was provided as an argument
 if [ -z "$1" ]; then
-  echo "Usage: $0 <IP_ADDRESS>"
-  exit 1
+  echo "Usage: $0 <IP_ADDRESS>"  # Print usage if no argument is given
+  exit 1                        # Exit with error code
 fi
 
-IP="$1"
+IP="$1"  # Assign the first argument to the IP variable
 
+# Update package lists and install Docker and Docker Compose on the remote server
 ssh root@$IP "apt update && apt install -y docker.io docker-compose"
+
+# Enable and start the Docker service on the remote server
 ssh root@$IP "systemctl enable --now docker"
 
+# Create the WireGuard config directory on the remote server
 ssh root@$IP "mkdir -p /opt/wireguard/config"
 
+# Run the WireGuard Docker container on the remote server with required environment variables and options
 ssh root@$IP "docker run -d \
   --name=wireguard \
   --cap-add=NET_ADMIN \
@@ -31,9 +35,33 @@ ssh root@$IP "docker run -d \
   -p 51820:51820/udp \
   -v /opt/wireguard/config:/config \
   -v /lib/modules:/lib/modules \
-  --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
+  --sysctl=\"net.ipv4.conf.all.src_valid_mark=1\" \
   --restart unless-stopped \
-  lscr.io/linuxserver/wireguard:latest"
+  lscr.io/linuxserver/wireguard:latest"    # Use the latest WireGuard image
 
+# Copy the generated WireGuard peer config file from the server to the local Downloads folder
 scp root@$IP:/opt/wireguard/config/peer1/peer1.conf ~/Downloads/peer1.conf
+
+# Copy the generated WireGuard peer QR code image from the server to the local Downloads folder
 scp root@$IP:/opt/wireguard/config/peer1/peer1.png ~/Downloads/peer1.png
+
+# --- Explanation of docker run options above ---
+# --name=wireguard: Name the container 'wireguard'
+# --cap-add=NET_ADMIN: Add NET_ADMIN capability
+# --cap-add=SYS_MODULE: Add SYS_MODULE capability
+# -e PUID=1000: Set user ID
+# -e PGID=1000: Set group ID
+# -e TZ=Etc/UTC: Set timezone
+# -e SERVERURL=$IP: Set server URL to the provided IP
+# -e SERVERPORT=51820: Set WireGuard port
+# -e PEERS=1: Number of peers to generate
+# -e PEERDNS=auto: Use automatic DNS for peers
+# -e INTERNAL_SUBNET=10.13.13.0: Set internal subnet
+# -e ALLOWEDIPS=0.0.0.0/0: Allow all IPs through VPN
+# -e LOG_CONFS=true: Enable config logging
+# -p 51820:51820/udp: Map UDP port 51820
+# -v /opt/wireguard/config:/config: Mount config directory
+# -v /lib/modules:/lib/modules: Mount modules directory
+# --sysctl="net.ipv4.conf.all.src_valid_mark=1": Set sysctl for WireGuard
+# --restart unless-stopped: Restart container unless stopped manually
+# lscr.io/linuxserver/wireguard:latest: Use the
